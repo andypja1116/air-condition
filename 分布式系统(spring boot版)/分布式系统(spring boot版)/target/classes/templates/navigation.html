@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>导航</title>
+        <script src="../static/js/http_ajax.aspnetcdn.com_ajax_jquery_jquery-3.5.1.js"></script>
+        <script src="../static/js/navigatonJS.js" defer></script>
+        <link rel="stylesheet" href="../static/css/navigationCss.css"/>
+    </head>
+    <body>
+        <div id="content">
+            <h2>欢迎使用酒店管理系统</h2>
+            <div id="main">
+                <div id="receptionDiv">
+                    <button id="receptionist" th:text="${is_receptionist_logged} == true ? '前台已登录' : '前台登录'"
+                            th:disabled="${is_receptionist_logged == true}">前台登录</button>
+                    <input type="password" id="receptionLog" placeholder="密码" hidden>
+                </div>
+                <div id="managerDiv">
+                    <button id="manager" th:text="${is_manger_logged} == true ? '经理已登录' : '经理登录'"
+                            th:disabled="${is_manger_logged == true}">经理登录</button>
+                    <input type="password" id="managerLog" placeholder="密码" hidden>
+                </div>
+                <div id="controllerDiv">
+                    <button id="controller" th:text="${is_controller_logged} == true ? '空调管理员已登录' : '空调管理员登录'"
+                            th:disabled="${is_controller_logged == true}">空调管理员登录</button>
+                    <input type="password" id="controllerLog" placeholder="密码" hidden>
+                </div>
+                <div id="customerDiv">
+                    <button id="customer">用户登录</button>
+                    <input type="text" id="customerLog" placeholder="用户名" hidden>
+                </div>
+                <div id="time"></div>
+            </div>
+        </div>
+    </body>
+</html>

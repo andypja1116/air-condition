@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>用户主页</title>
+        <script src="../static/js/http_ajax.aspnetcdn.com_ajax_jquery_jquery-3.5.1.js"></script>
+        <script src="../static/js/customerJS.js" defer></script>
+        <link rel="stylesheet" href="../static/css/customerMainCss.css"/>
+    </head>
+    <body>
+        <div id="content">
+            <div id="userNameDiv">用户名:<span th:text="${session.userName}" id="userName">瓜皮</span></div>
+            <div id="customerStateDiv">入住状态:<span th:text="${session.state == 0 ? '未入住':'已入住'}" id="state">未入住</span></div>
+            <div id="roomInfoDiv">
+                房间号:<span th:text="${session.roomId != null ? session.roomId:'未分配房间'}" id="roomId">8</span>
+                <button class="btn btn-info" id="checkIn" th:hidden="${1 == session.state}">申请入住</button>
+            </div>
+
+            <div id="ACDiv" th:hidden="${0 == session.state}">
+                <h2 id="ACTitle">空调信息</h2>
+                <!--
+                <div>模式<input th:val="${info != null ? info.mode: 0}" id="mode" type="number" value="0" max="1" min="0"></div>
+                -->
+                <div id="modeDiv">模式
+                    <input id="cold" type="radio" name="mode" value="0"><span id="coldSpan">制冷</span>
+                    <input id="heat" type="radio" name="mode" value="1"><span id="heatSpan">加热</span>
+                </div>
+                <div id="windSpeedDiv">风速<input type="range" max="3" min="0" id="speed" value="0"></div>
+                <div id="currentTempDiv">
+                    当前温度:<span id="currentTemp" th:text="${info != null ? info.currentTemp: 30}">30</span>
+                </div>
+                <div id="destTempDiv">
+                    目标温度:<input id="destTemp" type="number" th:value="${info != null ? info.desTemp: 26}" maxlength="2"
+                                max="30" min="18" value="26">
+                </div>
+                <div id="costDiv">
+                    当前费用:<span id="cost" th:text="${info != null ? info.currentCost: 0.0}">0.0</span>
+                </div>
+                <div id="checkoutDiv"><button id="checkout">退房</button></div>
+                <div id="quitDiv"><button id="quit" th:hidden="${1 == session.state}">退出</button></div>
+            </div>
+            <div id="alert">提示信息</div>
+        </div>
+    </body>
+</html>

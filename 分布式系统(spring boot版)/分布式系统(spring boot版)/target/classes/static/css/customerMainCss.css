@@ -1,0 +1,219 @@
+body
+{
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#userNameDiv
+{
+    text-align: center;
+    font-size: 25px;
+}
+
+span#userName
+{
+    text-shadow: 3px 3px 6px rgb(100, 100, 100);
+}
+
+div#quitDiv, div#checkoutDiv, div#roomInfoDiv
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+div#modeDiv
+{
+    font-size: 22px;
+}
+
+span#heatSpan
+{
+    color: darkorange;
+    text-shadow: 1px 1px 1px red;
+}
+
+span#coldSpan
+{
+    color: cornflowerblue;
+    text-shadow: 1px 1px 1px blue;
+}
+
+input#cold, input#heat
+{
+    width: 18px;
+    height: 18px;
+}
+
+div#windSpeedDiv
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    transform: scale(1.5);
+}
+
+div#ACDiv
+{
+    padding: 20px 35px 20px 35px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 4px rgb(200, 200, 200),
+                0 0 36px 6px rgb(210, 210, 210) inset;
+}
+
+
+div#ACDiv.cold
+{
+    transition: 0.6s;
+    box-shadow: 0 0 10px 4px rgb(170, 200, 240),
+                0 0 36px 6px rgb(180, 211, 249) inset;
+}
+
+div#ACDiv.heat
+{
+    transition: 0.6s;
+    box-shadow: 0 0 10px 4px rgb(243, 160, 140),
+                0 0 36px 6px rgb(248, 171, 145) inset;
+}
+
+div#customerStateDiv
+{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+button#checkIn
+{
+    border: none;
+    margin-left: 20px;
+    font-size: 20px;
+    padding: 5px 8px 5px 8px;
+    border-radius: 5px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px 4px rgb(170, 200, 240),
+                0 0 24px 4px rgb(180, 211, 249) inset;
+}
+
+button#checkIn:hover
+{
+    transition: 0.5s;
+    box-shadow: 0 0 10px 4px rgb(215, 215, 255),
+                0 0 24px 4px rgb(230, 230, 255) inset;
+}
+
+div
+{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2
+{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h2.cold
+{
+    transition: 0.95s;
+    text-shadow: 2px 2px 3px cornflowerblue;
+}
+
+h2.heat
+{
+    transition: 0.95s;
+    text-shadow: 2px 2px 3px darkorange;
+}
+
+div#content
+{
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 4px rgb(230, 230, 230),
+                0 0 36px 6px rgb(240, 240, 240) inset;
+}
+
+div#content.on
+{
+    transition: 1.45s;
+    box-shadow: 0 0 10px 4px rgb(220, 180, 220),
+    0 0 36px 6px rgb(240, 210, 240) inset;
+}
+
+div#currentTempDiv
+{
+    font-size: 22px;
+}
+
+div#destTempDiv
+{
+    font-size: 22px;
+}
+
+div#costDiv
+{
+    font-size: 22px;
+}
+
+input#destTemp
+{
+    font-size: 22px;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+div#alert
+{
+    font-size: 22px;
+}
+
+button#checkout, button#quit
+{
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 20px;
+    padding: 5px 40px 5px 40px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+button#checkout
+{
+    box-shadow: 0 0 5px 2px rgb(243, 160, 140),
+                0 0 24px 4px rgb(248, 171, 145) inset;
+}
+
+button#checkout:hover
+{
+    transition: 0.5s;
+    box-shadow: 0 0 5px 2px rgb(255, 200, 200),
+                0 0 24px 4px rgb(255, 220, 220) inset;
+}
+
+
+button#quit
+{
+    box-shadow: 0 0 5px 2px rgb(243, 200, 140),
+                0 0 24px 4px rgb(248, 211, 145) inset;
+}
+
+button#quit:hover
+{
+    transition: 0.5s;
+    box-shadow: 0 0 5px 2px rgb(255, 215, 150),
+                0 0 24px 4px rgb(255, 230, 165) inset;
+}
+
+

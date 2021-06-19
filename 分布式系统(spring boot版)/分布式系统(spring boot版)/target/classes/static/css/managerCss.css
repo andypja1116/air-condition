@@ -1,0 +1,78 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div
+{
+    text-align: center;
+}
+
+div#content
+{
+    border-radius: 15px;
+    box-shadow: 0 0 30px 6px rgb(150, 150, 230),
+                0 0 50px 10px rgb(170, 170, 255) inset;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#alert
+{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+button#quit
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgb(220, 220, 140),
+                0 0 24px 4px rgb(240, 240, 150) inset;
+    border: none;
+}
+
+button#quit:hover
+{
+    transition: 0.5s;
+    box-shadow: 0 0 5px 2px rgb(240, 240, 150),
+                0 0 24px 4px rgb(255, 255, 165) inset;
+}
+
+div#userName
+{
+    font-size: 37px;
+    text-shadow: 3px 3px 3px rgb(140, 140, 140);
+}
+
+div#billTitle
+{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+div#billInfo > div
+{
+    padding: 5px 15px 5px 15px;
+    margin: 10px;
+    font-size: 22px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgb(170, 200, 240),
+                0 0 24px 4px rgb(180, 211, 249) inset;
+}
+
+div#billInfo > div > span
+{
+    margin-right: 40px;
+}
